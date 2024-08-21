@@ -11,6 +11,6 @@ sock.connect((host, port))
 
 # receive message from server
 message = sock.recv(1024).decode()
-print("Message : ", message)
+print("Message: ", message)
 
 sock.close()
