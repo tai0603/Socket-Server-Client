@@ -6,7 +6,7 @@ port = 8080
 # create object of socket on client side
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# connect to the server by providing same host and port that has been used on server side.
+# connect to the server
 sock.connect((host, port))
 
 # receive message from server

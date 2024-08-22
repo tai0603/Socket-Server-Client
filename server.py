@@ -8,15 +8,14 @@ sock.bind((host, port)) # binds the socket with the given IP and port
 
 # server is listening and accept maximum one connection at a time
 sock.listen(1)
-print("The server is running and listening on port: ", port)
 
 while True:
 	# server is accepting the connection from clients
 	connection, address = sock.accept() # accept return two things -> connection and address of the client.
-	print("Client", connection, "has joined us recently with address: ", address)
+	print("Client", connection, "has joined with address: ", address)
 
 	# setting up message from send
-	message = "Hello from Server to Client"
+	message = "Sever sending message to Client"
 	connection.send(message.encode()) # send message in form of bytes
 
 	instr = input("Enter exit to disconnect the server: ")
